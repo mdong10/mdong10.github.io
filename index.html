@@ -10,17 +10,31 @@
     border: none;
     text-align: left;
     outline: none;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
     }
-    
+
     .active, .collapsible:hover {
     background-color: #555;
     }
-    
+
+    .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    }
+
+    .active:after {
+    content: "\2212";
+    }
+
     .content {
     padding: 0 18px;
-    display: none;
+    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
     }
 </style>
@@ -29,6 +43,7 @@
     <h2>Michelle Dong</h2>
     <h3>Sophomore @ Macalester College</h3>
     <h3>Computer Science and Economics</h3>
+    <h3>Mdong@macalester.edu</h3>
     <img src="10007.webp" width="200" />
     <ul>
         <li>
@@ -41,9 +56,9 @@
         <a href="Michelle Dong Resume 2022C.pdf">Resume</a>
         </li>
     </ul>
-    <p></p>
+
 </body>
-<button type="button" class="collapsible">Courses</button>
+<button type="button" class="collapsible">Courses   +-</button>
 <div class="content">
     <body>
         <h2>Freshmen Year</h2>
@@ -126,11 +141,11 @@
       coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
         } else {
-          content.style.display = "block";
-        }
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
       });
     }
 </script>
