@@ -1,5 +1,29 @@
 <!DOCTYPE html>
 <html>
+<style>
+    .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    }
+    
+    .active, .collapsible:hover {
+    background-color: #555;
+    }
+    
+    .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    }
+</style>
 <body>
     <h1>Hello World</h1>
     <h2>Michelle Dong</h2>
@@ -19,76 +43,95 @@
     </ul>
     <p></p>
 </body>
-<body>
-    <h2>Freshmen Year</h2>
-    <h4>Fall 2021</h4>
-    <ul>
-        <li>
-        <h5>COMP 127 - Object-Oriented Programming and Abstraction</h5>
-        </li>
-        <li>
-        <h5>ECON 119 - Principles of Economics</h5>
-        </li>
-        <li>
-        <h5>EDUC 220 - Educational Psychology</h5>
-        </li>
-        <li>
-        <h5>INTD 101 - College Writing</h5>
-        </li>
-    </ul>
-    <h4>Spring 2022</h4>
-    <ul>
-        <li>
-        <h5>COMP 128 - Data Structures</h5>
-        </li>
-        <li>
-        <h5>ECON 221 - Introduction to International Economics</h5>
-        </li>
-        <li>
-        <h5>ECON 113 - Financial Accounting</h5>
-        </li>
-        <li>
-        <h5>MATH 137 - Applied Multivariable Calculus II</h5>
-        </li>
-    </ul>
-
-    <h2>Sophomore Year</h2>
-    <h4>Fall 2022</h4>
-    <ul>
-        <li>
-        <h5>COMP 221 - Algorithm Design and Analysis</h5>
-        </li>
-        <li>
-        <h5>ECON 361 - Intermediate Microeconomic Analysis</h5>
-        </li>
-        <li>
-        <h5>MATH 236 - Linear Algebra</h5>
-        </li>
-        <li>
-        <h5>STAT 155 - Introduction to Statistical Modeling</h5>
-        </li>
-        <li>
-        <h5>INTD 202 - Intellectual Property</h5>
-        </li>	
-    </ul>
-    <h4>Spring 2023</h4>
-    <ul>
-        <li>
-        <h5>COMP 225 - Software Design and Development</h5>
-        </li>
-        <li>
-        <h5>ECON 371 - Intermediate Macroeconomic Analysis</h5>
-        </li>
-        <li>
-        <h5>MATH 279 - Discrete Mathematics</h5>
-        </li>        
-        <li>
-        <h5>STAT 253 - Statistical Machine Learning</h5>
-        </li>
-        <li>
-        <h5>COMP 601 - Tutorial</h5>
-        </li>
-    </ul>
-
-</body>
+<button type="button" class="collapsible">Courses</button>
+<div class="content">
+    <body>
+        <h2>Freshmen Year</h2>
+        <h4>Fall 2021</h4>
+        <ul>
+            <li>
+            <h5>COMP 127 - Object-Oriented Programming and Abstraction</h5>
+            </li>
+            <li>
+            <h5>ECON 119 - Principles of Economics</h5>
+            </li>
+            <li>
+            <h5>EDUC 220 - Educational Psychology</h5>
+            </li>
+            <li>
+            <h5>INTD 101 - College Writing</h5>
+            </li>
+        </ul>
+        <h4>Spring 2022</h4>
+        <ul>
+            <li>
+            <h5>COMP 128 - Data Structures</h5>
+            </li>
+            <li>
+            <h5>ECON 221 - Introduction to International Economics</h5>
+            </li>
+            <li>
+            <h5>ECON 113 - Financial Accounting</h5>
+            </li>
+            <li>
+            <h5>MATH 137 - Applied Multivariable Calculus II</h5>
+            </li>
+        </ul>
+    
+        <h2>Sophomore Year</h2>
+        <h4>Fall 2022</h4>
+        <ul>
+            <li>
+            <h5>COMP 221 - Algorithm Design and Analysis</h5>
+            </li>
+            <li>
+            <h5>ECON 361 - Intermediate Microeconomic Analysis</h5>
+            </li>
+            <li>
+            <h5>MATH 236 - Linear Algebra</h5>
+            </li>
+            <li>
+            <h5>STAT 155 - Introduction to Statistical Modeling</h5>
+            </li>
+            <li>
+            <h5>INTD 202 - Intellectual Property</h5>
+            </li>	
+        </ul>
+        <h4>Spring 2023</h4>
+        <ul>
+            <li>
+            <h5>COMP 225 - Software Design and Development</h5>
+            </li>
+            <li>
+            <h5>ECON 371 - Intermediate Macroeconomic Analysis</h5>
+            </li>
+            <li>
+            <h5>MATH 279 - Discrete Mathematics</h5>
+            </li>        
+            <li>
+            <h5>STAT 253 - Statistical Machine Learning</h5>
+            </li>
+            <li>
+            <h5>COMP 601 - Tutorial</h5>
+            </li>
+        </ul>
+    
+    </body>
+</div>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+</script>
 </html> 
