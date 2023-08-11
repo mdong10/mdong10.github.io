@@ -254,7 +254,7 @@ table td { border: 1px solid #e8e8e8; }
     flex-direction: row;
     justify-content: center;
     align-content: center; */
-    padding: 2px;
+    padding: 1px;
   }
 
   .postF img{
