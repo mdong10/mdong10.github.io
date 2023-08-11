@@ -259,6 +259,6 @@ table td { border: 1px solid #e8e8e8; }
 
   .postF img{
     width: 30%;
-    height: fit-content;
+    height: auto;
     margin: 5px;
   }
