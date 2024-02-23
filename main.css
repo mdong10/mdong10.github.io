@@ -240,7 +240,6 @@ table td { border: 1px solid #e8e8e8; }
 
   .content {
   padding: 0 18px;
-  line-height: .8;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
