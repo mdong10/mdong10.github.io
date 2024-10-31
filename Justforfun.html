@@ -42,46 +42,6 @@
 </header>
 
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-    <script>
-        // Replace with your Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyDBRJWWQgtOeyByJANRL6RM22ZxdFTyNo0",
-          authDomain: "portfolio-de6f0.firebaseapp.com",
-          projectId: "portfolio-de6f0",
-          storageBucket: "portfolio-de6f0.appspot.com",
-          messagingSenderId: "148381733493",
-          appId: "1:148381733493:web:c9c983b095ee97fab81e3c"
-        };
-
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.database();
-        const clickCounterRef = db.ref('clickCounter');
-
-        // Get the button and display elements
-        const button = document.getElementById('myButton');
-        const counterDisplay = document.getElementById('counterDisplay');
-
-        // Add a click event listener
-        button.addEventListener('click', () => {
-          clickCounterRef.transaction(currentCount => {
-            return currentCount + 1;
-          });
-        });
-
-        // Listen for changes in the clickCounter node
-        clickCounterRef.on('value', (snapshot) => {
-          const count = snapshot.val();
-          counterDisplay.textContent = count;
-        });
-    </script>
-<body>
-<button id="myButton">Click Me</button>
-<p id="counterDisplay">0</p>
-
-
     <main class="page-content" aria-label="Content">
         <div class="wrapper">
             <div>
