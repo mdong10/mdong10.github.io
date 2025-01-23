@@ -1,0 +1,1 @@
+This project uses vcard-personal-portfolio by codewithsadee, licensed under the MIT License.
